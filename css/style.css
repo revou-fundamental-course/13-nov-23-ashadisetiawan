@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #8093f1;
+    background-color: #33658a;
 }
 
 /* HEADER SECTION */
@@ -22,8 +22,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #8093f1;
-    box-shadow: 0 0 15px rgb(0, 0, 0, 0.3);
+    background-color: #33658a;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .navigation a:hover {
-    color: #5f6dc0;
+    color: #86bbd8;
 }
 
 .title-header {
@@ -83,6 +83,15 @@ body {
     max-width: 80%;
     border-radius: 8px;
     box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
+}
+
+.review-section h5 {
+    max-width: 80%;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
 }
 
 .contact-section {
@@ -139,16 +148,34 @@ form {
     box-shadow: 0 1px 0 rgb(0, 0, 0, 0.1);
 }
 
-.btn {
+.select-box {
     width: 100%;
     margin-top: 20px;
 }
 
-.btn input {
+.select-box label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.select-box select {
+    height: 50px;
+    width: 100%;
+    margin-top: 8px;
+    padding: 0 15px;
+    outline: none;
+    font-size: 16px;
+    color: #707070;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+button {
     position: relative;
     height: 50px;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -160,6 +187,6 @@ form {
     transition: all 0.3s ease;
 }
 
-.btn input:hover {
+button:hover {
     background-color: #333;
 }
