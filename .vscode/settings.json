@@ -1,0 +1,10 @@
+{
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 13,
+    "editor.letterSpacing": 0.4,
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Tokyo Night",
+    "terminal.integrated.fontSize": 13,
+    "editor.wordWrap": "on"
+}
