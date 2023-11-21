@@ -12,28 +12,28 @@
 <body>
     <header>
         <div class="navigation-header">
-            <a href="#" class="logo">Wan Travel.</a>
+            <a href="#" class="logo"><span>Wan</span> Travel.</a>
             <nav class="navigation">
-                <a href="#">Beranda</a>
-                <a href="#">Paket</a>
-                <a href="#">Kontak</a>
+                <a href="#">Home</a>
+                <a href="#pack">Our Package</a>
+                <a href="#">Call Us</a>
             </nav>
         </div>
         <div class="title-header">
-            <h1>Liburan ke Jogja? Wan Travel Aja</h1>
+            <h1>Liburan ke Jogja? <span>Wan</span> Travel Aja</h1>
             <h4>Anda senang, kami pun ikut senang</h4>
         </div>
     </header>
 
     <main>
-        <section class="home">
+        <section class="main-content">
             <div class="review-section">
                 <img src="https://mylife.id/wp-content/uploads/2021/01/mylife-4-2.jpg">
                 <h5>
                     <q><em>Selalu ada yang tersisa dari Jogja untukmu. Rindu dan candu.</em></q>
                 </h5>
             </div>
-            <div class="contact-section">
+            <div class="contact-section" id="contact">
                 <h5>Hubungi Kami</h5>
                 <h4>Sales akan menghubungi Anda 1 x 24 jam setelah data kami terima</h4>
                 <form>
@@ -55,11 +55,60 @@
                             <option>Pantai Kukup</option>
                         </select>
                     </div>
-                    <button type="submit">SEND</button>
+                    <button class="form-btn" type="submit">SEND</button>
                 </form>
             </div>
         </section>
+        <section class="packages-section" id="pack">
+            <div class="package-title">
+                <h2>Our Package</h2>
+            </div>
+            <div class="package-grid">
+                <div class="package">
+                    <img src="assets/malioboro.jpg">
+                    <h2>Malioboro</h2>
+                    <p class="desc">
+                        Malioboro merupakan kawasan perbelanjaan yang legendaris dan menjadi salah satu kebanggaan Kota
+                        Jogja
+                    </p>
+                    <p class="price">Diskon 10%</p>
+                    <button class="pack-btn">Pesan Sekarang</button>
+                </div>
+                <div class="package">
+                    <img src="assets/kaliurang.jpg">
+                    <h2>Kaliurang</h2>
+                    <p class="desc">
+                        Kaliurang merupakan daerah wisata di kabupaten Sleman yang menawarkan panorama alam indah, udara
+                        sejuk, serta berbagai objek wisata yang menarik.
+                    </p>
+                    <p class="price">Diskon 15%</p>
+                    <button class="pack-btn">Pesan Sekarang</button>
+                </div>
+                <div class="package">
+                    <img src="assets/kukup.jpg">
+                    <h2>Pantai Kukup</h2>
+                    <p class="desc">
+                        Pantai Kukup merupakan salah satu pantai yang populer di kabupaten Gunungkidul, memiliki pasir
+                        putih yang terhampar luas menambah keindahan pantai ini.
+                    </p>
+                    <p class="price">Diskon 20%</p>
+                    <button class="pack-btn">Pesan Sekarang</button>
+                </div>
+                <div class="package">
+                    <img src="assets/prambanan.jpg">
+                    <h2>Prambanan</h2>
+                    <p class="desc">
+                        Prambanan merupakan kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9
+                        masehi.
+                    </p>
+                    <p class="price">Diskon 25%</p>
+                    <button class="pack-btn">Pesan Sekarang</button>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>&copy; 2023 | <span>Wan</span> Travel</footer>
 
     <script src="js/script.js"></script>
 </body>

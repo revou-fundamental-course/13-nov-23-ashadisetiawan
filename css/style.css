@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,14 +13,18 @@ body {
 }
 
 /* HEADER SECTION */
+header span {
+    color: #29ecfa;
+}
+
 .navigation-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100px;
-    padding: 30px 10%;
     display: flex;
+    padding: 30px 10%;
     justify-content: space-between;
     align-items: center;
     background-color: #33658a;
@@ -48,9 +53,9 @@ body {
 }
 
 .title-header {
+    display: flex;
     margin-top: 100px;
     height: 150px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -58,7 +63,7 @@ body {
 
 .title-header h1 {
     padding: 20px 0 30px;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     color: #fff;
 }
@@ -72,10 +77,10 @@ body {
 
 /* MAIN SECTION */
 
-/* home section */
-.home {
-    padding: 30px 10%;
+/* main content */
+.main-content {
     display: flex;
+    padding: 30px 10%;
     justify-content: space-between;
 }
 
@@ -101,7 +106,7 @@ body {
     padding: 25px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-section h5 {
@@ -171,7 +176,7 @@ form {
     border-radius: 6px;
 }
 
-button {
+.form-btn {
     position: relative;
     height: 50px;
     width: 100%;
@@ -187,6 +192,100 @@ button {
     transition: all 0.3s ease;
 }
 
-button:hover {
+.form-btn:hover {
     background-color: #333;
+}
+
+/* packages section */
+.package-title {
+    display: flex;
+    padding: 30px 10%;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 30px 10%;
+}
+
+.package-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.package {
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: #ddd;
+}
+
+.package img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.package h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.desc {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #727070;
+}
+
+.price {
+    margin-top: 20px;
+    color: #33658a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.pack-btn {
+    height: 50px;
+    width: 50%;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #555;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.pack-btn:hover {
+    background-color: #333;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    border-top: 1px solid #fff;
+}
+
+footer span {
+    color: #29ecfa;
+    font-weight: bold;
 }
