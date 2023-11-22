@@ -16,7 +16,7 @@
             <nav class="navigation">
                 <a href="#">Home</a>
                 <a href="#pack">Our Package</a>
-                <a href="#">Call Us</a>
+                <a href="#btn-call">Call Us</a>
             </nav>
         </div>
         <div class="title-header">
@@ -28,7 +28,17 @@
     <main>
         <section class="main-content">
             <div class="review-section">
-                <img src="https://mylife.id/wp-content/uploads/2021/01/mylife-4-2.jpg">
+                <img class="img-slideshow" src="assets/tugu.jpg">
+                <img class="img-slideshow" src="assets/malioboro.jpg">
+                <img class="img-slideshow" src="assets/kaliurang.jpg">
+                <img class="img-slideshow" src="assets/prambanan.jpg">
+                <img class="img-slideshow" src="assets/kukup.jpg">
+
+                <div class="btn-slide">
+                    <button class="prev" onclick="plusDivs(-1)">Prev</button>
+                    <button class="next" onclick="plusDivs(1)">Next</button>
+                </div>
+
                 <h5>
                     <q><em>Selalu ada yang tersisa dari Jogja untukmu. Rindu dan candu.</em></q>
                 </h5>
@@ -55,16 +65,17 @@
                             <option>Pantai Kukup</option>
                         </select>
                     </div>
-                    <button class="form-btn" type="submit">SEND</button>
+                    <button class="form-btn" type="submit">send</button>
                 </form>
             </div>
         </section>
+
         <section class="packages-section" id="pack">
             <div class="package-title">
-                <h2>Our Package</h2>
+                <h2>Our <span>Package</span></h2>
             </div>
-            <div class="package-grid">
-                <div class="package">
+            <div class="package">
+                <div class="package-item">
                     <img src="assets/malioboro.jpg">
                     <h2>Malioboro</h2>
                     <p class="desc">
@@ -74,7 +85,7 @@
                     <p class="price">Diskon 10%</p>
                     <button class="pack-btn">Pesan Sekarang</button>
                 </div>
-                <div class="package">
+                <div class="package-item">
                     <img src="assets/kaliurang.jpg">
                     <h2>Kaliurang</h2>
                     <p class="desc">
@@ -84,7 +95,7 @@
                     <p class="price">Diskon 15%</p>
                     <button class="pack-btn">Pesan Sekarang</button>
                 </div>
-                <div class="package">
+                <div class="package-item">
                     <img src="assets/kukup.jpg">
                     <h2>Pantai Kukup</h2>
                     <p class="desc">
@@ -94,9 +105,9 @@
                     <p class="price">Diskon 20%</p>
                     <button class="pack-btn">Pesan Sekarang</button>
                 </div>
-                <div class="package">
+                <div class="package-item">
                     <img src="assets/prambanan.jpg">
-                    <h2>Prambanan</h2>
+                    <h2>Candi Prambanan</h2>
                     <p class="desc">
                         Prambanan merupakan kompleks candi Hindu terbesar di Indonesia yang dibangun pada abad ke-9
                         masehi.
@@ -106,9 +117,32 @@
                 </div>
             </div>
         </section>
+
+        <section class="closing-section">
+            <div class="closing-title">
+                <h2>Closing <span>Argument</span></h2>
+            </div>
+            <div class="closing-argument">
+                <p>Jangan lupa bahagia, mari liburan bersama kami.</p>
+                <p>Biar liburan lebih asyik <span class="start">Wan</span> <span class="end">Travel</span> aja 😁</p>
+                <button id="btn-call" type="submit">call to cation</button>
+            </div>
+
+        </section>
     </main>
 
-    <footer>&copy; 2023 | <span>Wan</span> Travel</footer>
+    <footer>
+        <p class="up"><span>Wan</span> Travel</p>
+        <div class="column">
+            <div class="start">
+                <p>Terms of Service</p>
+            </div>
+            <div class="end">
+                <p>Privacy Policy</p>
+            </div>
+        </div>
+        <p>&copy; 2023 All right reserved</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

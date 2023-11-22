@@ -55,6 +55,7 @@ header span {
 .title-header {
     display: flex;
     margin-top: 100px;
+    margin-bottom: 10px;
     height: 150px;
     flex-direction: column;
     justify-content: center;
@@ -69,9 +70,9 @@ header span {
 }
 
 .title-header h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color: #ddd;
 }
 
 
@@ -81,28 +82,58 @@ header span {
 .main-content {
     display: flex;
     padding: 30px 10%;
+    gap: 50px;
     justify-content: space-between;
 }
 
+.review-section {
+    position: relative;
+    max-width: 600px;
+}
+
 .review-section img {
-    max-width: 80%;
+    width: 100%;
     border-radius: 8px;
     box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
 }
 
+.btn-slide {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    display: none;
+}
+
+.btn-slide button.prev,
+.btn-slide button.next {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ddd;
+    margin: 5px 10px 0;
+    padding: 3px 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+
+.btn-slide button:hover,
+.btn-slide button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .review-section h5 {
-    max-width: 80%;
-    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 400;
-    color: #fff;
+    color: #ddd;
     text-align: center;
 }
 
 .contact-section {
     position: relative;
     max-width: 400px;
-    width: 100%;
     padding: 25px;
     background-color: #fff;
     border-radius: 8px;
@@ -123,6 +154,7 @@ header span {
 
 form {
     margin-top: 30px;
+    width: 100%;
 }
 
 .input-box {
@@ -177,12 +209,12 @@ form {
 }
 
 .form-btn {
-    position: relative;
     height: 50px;
     width: 100%;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 600;
+    text-transform: uppercase;
     letter-spacing: 1px;
     cursor: pointer;
     border: none;
@@ -199,43 +231,49 @@ form {
 /* packages section */
 .package-title {
     display: flex;
-    padding: 30px 10%;
-    width: 100%;
+    margin: 30px 0;
     height: 100px;
     justify-content: center;
     align-items: center;
 }
 
-.package-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    padding: 30px 10%;
-}
-
 .package-title h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
     color: #fff;
 }
 
+.package-title h2 span {
+    text-decoration: underline;
+    color: #ffb32b;
+}
+
 .package {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 30px 10%;
+}
+
+.package-item {
+    width: 450px;
+    margin-bottom: 20px;
     padding: 20px;
     border: none;
-    outline: none;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     background-color: #ddd;
 }
 
-.package img {
-    max-width: 100%;
+.package-item img {
+    width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.package h2 {
+.package-item h2 {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 500;
@@ -257,7 +295,7 @@ form {
 
 .pack-btn {
     height: 50px;
-    width: 50%;
+    width: 65%;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 600;
@@ -274,10 +312,78 @@ form {
     background-color: #333;
 }
 
+/* closing section */
+.closing-title {
+    display: flex;
+    margin: 30px 0;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.closing-title h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.closing-title h2 span {
+    text-decoration: underline;
+    color: #ffb32b;
+}
+
+.closing-argument {
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.closing-argument p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ddd;
+    letter-spacing: 0.8px;
+}
+
+#btn-call {
+    margin-top: 50px;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: #444;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+#btn-call:hover {
+    background-color: #222;
+    color: #ffb32b;
+    border: 1px solid #ffb32b;
+}
+
+span.start {
+    color: #29ecfa;
+    font-weight: bold;
+}
+
+span.end {
+    color: #fff;
+    font-weight: bold;
+}
+
 /* FOOTER */
 footer {
+    background-color: #2d5777;
     margin-top: 50px;
-    padding: 20px;
+    padding: 50px 0;
     text-align: center;
     color: #fff;
     font-size: 16px;
@@ -285,7 +391,218 @@ footer {
     border-top: 1px solid #fff;
 }
 
+footer p.up {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 footer span {
     color: #29ecfa;
-    font-weight: bold;
+}
+
+/* RESPONSIVE LAYOUT */
+@media screen and (max-width:1200px) {
+    .package-item {
+        flex-basis: 45%;
+    }
+
+    .package-item h2 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .desc {
+        font-size: 11px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .pack-btn {
+        height: 40px;
+        font-size: 15px;
+        letter-spacing: normal;
+        width: 60%;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .navigation a {
+        font-size: 15px;
+    }
+
+    .title-header h1 {
+        font-size: 30px;
+    }
+
+    .title-header h4 {
+        font-size: 17px;
+    }
+
+    .review-section h5 {
+        font-size: 15px;
+    }
+
+    .contact-section h5 {
+        font-size: 18px;
+    }
+
+    .contact-section h4 {
+        font-size: 11px;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+
+    .input-box {
+        margin-top: 10px;
+    }
+
+    .input-box label {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .input-box input {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .select-box {
+        margin-top: 10px;
+    }
+    
+    .select-box label {
+        font-size: 14px;
+    }
+    .select-box select {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .form-btn {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .package-title h2 {
+        font-size: 25px;
+    }
+
+    .package-item {
+        flex-basis: 45%;
+    }
+
+    .pack-btn {
+        height: 40px;
+        font-size: 13px;
+        letter-spacing: normal;
+        width: 50%;
+    }
+
+    .closing-title h2 {
+        font-size: 25px;
+    }
+
+    .closing-argument p {
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    #btn-call {
+        height: 40px;
+        width: 180px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:630px) {
+    .main-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navigation-header {
+        justify-content: center;
+    }
+
+    .navigation-header a {
+        font-size: 14px;
+    }
+
+    .title-header h1 {
+        font-size: 20px;
+    }
+
+    .title-header h4 {
+        font-size: 15px;
+    }
+
+    .review-section {
+        width: 90%;
+    }
+
+    .review-section h5 {
+        font-size: 13px;
+    }
+
+    .contact-section {
+        width: 80%;
+    }
+
+    .package-title h2 {
+        font-size: 20px;
+    }
+
+    .package {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .package-item {
+        flex-basis: 80%;
+    }
+
+    .closing-title h2 {
+        font-size: 20px;
+    }
+
+    .closing-argument p {
+        font-size: 14px;
+        letter-spacing: 0.1px;
+    }
+
+    #btn-call {
+        height: 38px;
+        width: 160px;
+        font-size: 13px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
 }
