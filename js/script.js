@@ -68,10 +68,10 @@ function checkEmail() {
         email.parentElement.classList.add("error");
 
         if (email.value != "") {
-            errorTxtEmail.innerText = "Alamat email: contoh@email.com";
+            errorTxtEmail.innerText = "Email tidak valid! contoh@email.com";
         }
         else {
-            errorTxtEmail.innerText = "Masukkan Alamat Email";
+            errorTxtEmail.innerText = "Alamat email tidak boleh kosong";
         }
     }
     else {
