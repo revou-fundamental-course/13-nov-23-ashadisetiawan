@@ -47,23 +47,21 @@
                 <h5>Hubungi Kami</h5>
                 <h4>Sales akan menghubungi Anda 1 x 24 jam setelah data kami terima</h4>
                 <form>
-                    <div class="input-box">
+                    <div class="input-box field">
                         <label>Nama : </label>
-                        <input type="text" placeholder="Masukkan Nama Lengkap" required>
+                        <input type="text" placeholder="Masukkan Nama Lengkap" class="item" id="name">
+                        <div class="error-message">Nama tidak boleh kosong</div>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box field">
                         <label>Email : </label>
-                        <input type="email" placeholder="Masukkan Email" required>
+                        <input type="text" placeholder="Masukkan Alamat Email" class="item" id="email">
+                        <div class="error-message">Alamat email tidak boleh kosong</div>
                     </div>
-                    <div class="select-box">
-                        <label>Tertarik untuk liburan?</label>
-                        <select>
-                            <option hidden>Pilih Tujuan</option>
-                            <option>Malioboro</option>
-                            <option>Kaliurang</option>
-                            <option>Candi Prambanan</option>
-                            <option>Pantai Kukup</option>
-                        </select>
+                    <div class="textarea-box field">
+                        <label>Pesan : </label>
+                        <textarea id="message" cols="30" rows="3" class="item" placeholder="Masukkan Pesan"
+                            autocomplete="off"></textarea>
+                        <div class="error-message">Pesan tidak boleh kosong</div>
                     </div>
                     <button class="form-btn" type="submit">send</button>
                 </form>
@@ -144,6 +142,7 @@
         <p>&copy; 2023 All right reserved</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/script.js"></script>
 </body>
 

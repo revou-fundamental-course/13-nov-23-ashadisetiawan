@@ -132,10 +132,11 @@ header span {
 }
 
 .contact-section {
+    background-color: #fff;
     position: relative;
     max-width: 400px;
     padding: 25px;
-    background-color: #fff;
+    border: none;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -153,65 +154,61 @@ header span {
 }
 
 form {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 100%;
 }
 
-.input-box {
-    width: 100%;
-    margin-top: 20px;
+.input-box, .textarea-box {
+    margin-top: 15px;
 }
 
-.input-box label {
+.input-box label,
+.textarea-box label {
     font-size: 16px;
     font-weight: 600;
     color: #333;
 }
 
-.input-box input {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 8px;
-    padding: 0 15px;
-    outline: none;
-    font-size: 16px;
-    color: #707070;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-}
-
-.input-box input:focus {
+.input-box input:focus,
+.textarea-box textarea:focus {
     box-shadow: 0 1px 0 rgb(0, 0, 0, 0.1);
 }
 
-.select-box {
-    width: 100%;
-    margin-top: 20px;
+textarea {
+    resize: none;
 }
 
-.select-box label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-}
-
-.select-box select {
-    height: 50px;
+.field .item {
+    margin-top: 10px;
     width: 100%;
-    margin-top: 8px;
-    padding: 0 15px;
+    padding: 12.5px 15px;
     outline: none;
     font-size: 16px;
     color: #707070;
+    background: transparent;
     border: 1px solid #ddd;
     border-radius: 6px;
+}
+
+.field.error .item {
+    border: 1px solid #d93025;
+}
+
+.field .error-message {
+    font-size: 14.5px;
+    color: #d93025;
+    margin: 5px 0 0;
+    display: none;
+}
+
+.field.error .error-message {
+    display: block;
 }
 
 .form-btn {
     height: 50px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -252,13 +249,13 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 50px;
+    gap: 30px;
     padding: 30px 10%;
 }
 
 .package-item {
     width: 450px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding: 20px;
     border: none;
     border-radius: 10px;
@@ -296,7 +293,7 @@ form {
 .pack-btn {
     height: 50px;
     width: 65%;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -410,6 +407,18 @@ footer span {
 
 /* RESPONSIVE LAYOUT */
 @media screen and (max-width:1200px) {
+    .review-section {
+        max-width: 500px;
+    }
+    
+    .contact-section {
+        max-width: 450px;
+    }
+
+    .contact-section h5 {
+        font-size: 22px;
+    }
+
     .package-item {
         flex-basis: 45%;
     }
@@ -420,10 +429,11 @@ footer span {
     }
 
     .desc {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .price {
+        margin-top: 15px;
         font-size: 14px;
     }
 
@@ -433,8 +443,40 @@ footer span {
         letter-spacing: normal;
         width: 60%;
     }
+}
 
+@media screen and (max-width:1000px) {
+    .navigation-header,
+    .main-content,
+    .package {
+        padding: 20px 5%;
+    }
 
+    .review-section {
+        max-width: 450px;
+    }
+
+    .contact-section h5 {
+        font-size: 20px;
+    }    
+    
+    .input-box, .textarea-box {
+        margin-top: 10px;
+    }
+
+    .input-box label,
+    .textarea-box label {
+        font-size: 15px;
+    }
+
+    .field .item {
+        margin-top: 8px;
+        padding: 10px 12px;
+        font-size: 14.5px;
+    }
+    textarea {
+        height: 70px;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -454,11 +496,16 @@ footer span {
         font-size: 17px;
     }
 
+    .main-content {
+        padding: 20px 5%;
+    }
+
     .review-section h5 {
         font-size: 15px;
     }
 
     .contact-section h5 {
+        padding: 0;
         font-size: 18px;
     }
 
@@ -467,40 +514,40 @@ footer span {
     }
 
     form {
-        margin-top: 10px;
+        margin-top: 0;
     }
 
-    .input-box {
-        margin-top: 10px;
+    .input-box, .textarea-box {
+        margin-top: 5px;
     }
 
-    .input-box label {
+    .field .error-message {
+        font-size: 12px;
+    }
+
+    .input-box label,
+    .textarea-box label {
         margin-top: 10px;
         font-size: 14px;
     }
 
-    .input-box input {
-        height: 40px;
-        font-size: 13px;
-    }
-
-    .select-box {
-        margin-top: 10px;
-    }
-    
-    .select-box label {
-        font-size: 14px;
-    }
-    .select-box select {
-        height: 40px;
+    .field .item {
+        margin-top: 5px;
+        padding: 7.5px 10px;
         font-size: 13px;
     }
 
     .form-btn {
-        margin-top: 15px;
+        margin-top: 10px;
+        height: 40px;
         font-size: 14px;
+        font-weight: 500;
     }
 
+    .package {
+        padding: 20px 5%;
+    }
+    
     .package-title h2 {
         font-size: 25px;
     }
@@ -509,11 +556,31 @@ footer span {
         flex-basis: 45%;
     }
 
+    .package-item h2 {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .desc {
+        margin-top: 5px;
+        font-size: 11.5px;
+    }
+
+    .price {
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
     .pack-btn {
         height: 40px;
-        font-size: 13px;
+        font-size: 12px;
         letter-spacing: normal;
         width: 50%;
+    }
+
+    .closing-title {
+        margin: 20px 0;
+        height: 80px;
     }
 
     .closing-title h2 {
@@ -571,7 +638,7 @@ footer span {
     }
 
     .contact-section {
-        width: 80%;
+        width: 70%;
     }
 
     .package-title h2 {
