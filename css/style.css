@@ -50,6 +50,7 @@ header span {
 
 .navigation a:hover {
     color: #86bbd8;
+    background: transparent;
 }
 
 .title-header {
@@ -344,7 +345,7 @@ textarea {
     letter-spacing: 0.8px;
 }
 
-#btn-call {
+.call-btn {
     margin-top: 50px;
     height: 50px;
     width: 200px;
@@ -360,7 +361,7 @@ textarea {
     transition: all 0.3s ease;
 }
 
-#btn-call:hover {
+.call-btn:hover {
     background-color: #222;
     color: #ffb32b;
     border: 1px solid #ffb32b;
@@ -592,7 +593,7 @@ footer span {
         letter-spacing: 0.4px;
     }
 
-    #btn-call {
+    .call-btn {
         height: 40px;
         width: 180px;
         font-size: 14px;
@@ -638,7 +639,7 @@ footer span {
     }
 
     .contact-section {
-        width: 70%;
+        width: 90%;
     }
 
     .package-title h2 {
@@ -651,7 +652,7 @@ footer span {
     }
 
     .package-item {
-        flex-basis: 80%;
+        flex-basis: 90%;
     }
 
     .closing-title h2 {
@@ -663,7 +664,7 @@ footer span {
         letter-spacing: 0.1px;
     }
 
-    #btn-call {
+    .call-btn {
         height: 38px;
         width: 160px;
         font-size: 13px;
